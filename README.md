@@ -1,1 +1,310 @@
-# ShaobinTao
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Sightations &larr; Kyle Simek</title>
+   <meta name="author" content="Kyle Simek" />
+
+   <link rel="start" href="/" />
+
+	
+	
+    <link rel="shortcut icon" href="/favicon.ico">
+
+	
+  	<link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/sightations" title="RSS feed" />
+	
+	
+
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="/assets/themes/mark-reid/css/syntax.css" type="text/css" />
+
+   <!-- Jquery UI CSS --!>
+	
+
+   <!-- Homepage CSS -->
+   <link media="screen" rel="stylesheet" href="/assets/themes/mark-reid/css/screen.css" type="text/css" />
+
+   <!-- Handheld CSS -->
+   <link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/assets/themes/mark-reid/css/handheld.css" type="text/css" rel="stylesheet" />
+
+
+<!--[if IEMobile]>
+<link rel="stylesheet" type="text/css" href="/assets/themes/mark-reid/css/handheld.css" media="screen" />
+<![endif]-->
+
+   <!-- Mathjax Javascript -->
+
+	
+
+   <!-- three.js Javascript -->
+	
+	
+	
+
+	
+
+</head>
+<body id="">
+<div id="site">
+  
+  <div id="header">
+    <h1>
+    	<a href="/" title="Sightations">Sightations</a>
+    	<span class="byline">&larr; <a href="/">A Computer Vision Blog</a></span>
+    </h1>
+    <ul class="nav">
+      <li><a class="home" href="/">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/code.html">Code</a></li>
+      <li><a  href="/archive.html">Archive</a></li>
+      <li><a  href="/feeds.html"><img src="/img/feed-icon.gif" /></a></li> 
+
+    </ul>
+  </div>
+
+  
+<div id="page">
+	
+<style>
+.noexcerpt {
+  display: none;
+}
+</style>
+
+<div class="firehose-post article">
+    
+    
+    
+    
+  <a class="title-link" href="/2015/03/29/QA-recovering-pose-of-calibrated-camera/">
+  <h1 class="title">Q & A: Recovering pose of a calibrated camera - Algebraic vs. Geometric method?</h1>
+  </a>
+
+  <div class="date emphnext">March 29, 2015</div>
+    
+
+
+  
+    <p>This week I received an email with a question about recovering camera pose:</p>
+
+<p><strong>Q: I have images with a known intrinsic matrix, and corresponding points in world and image coordinates.  What's the best technique to resolve the extrinsic matrix?  Hartley and Zisserman cover geometric and algebraic approaches.  What are the tradeoffs between the geometric and algebraic approaches?  Under what applications would we choose one or the other?</strong></p>
+
+
+    <p> <a href="/2015/03/29/QA-recovering-pose-of-calibrated-camera/#more" class="more-link"><span class="readmore">more...</span></a></p>
+  
+
+
+</div>
+
+<div class="firehose-post article">
+    
+    
+    
+    
+  <a class="title-link" href="/2014/04/28/compiling-elsd-on-osx/">
+  <h1 class="title">Compiling ELSD (Ellipse and Line Segment Detector) on OS X</h1>
+  </a>
+
+  <div class="date emphnext">April 28, 2014</div>
+    
+
+
+  
+    
+
+<div class="clearer"></div>
+
+
+
+
+<div class='context-img' style='width:317px'>
+<div class='noexcerpt'>
+<img src='/img/elsd_before_small.jpg' width="317" />
+<div class='caption'>Input image
+</div>
+<br />
+</div>
+
+<img src='/img/elsd_after_small.png' width="317" />
+<div class='caption'>ELSD results
+</div>
+</div>
+
+
+<p><a href="http://ubee.enseeiht.fr/vision/ELSD/">ELSD is a new program</a> for detecting line segments and elliptical curves in images.  It gives <a href="/misc/elsd_results.html">very impressive results</a> by using a novel model selection criterion to distinguish noise curves from foreground, as detailed in the author's <a href="http://ubee.enseeiht.fr/vision/ELSD/eccv2012-ID576.pdf">ECCV 2012 paper</a>.  Most impressive, it works out of the box <strong>with no parameter tuning.</strong></p>
+
+<p>The authors have generously released their code under <a href="http://www.gnu.org/licenses/why-affero-gpl.html">Affero GPL</a>, but it requires a few tweaks to compile on OSX.</p>
+
+
+    <p> <a href="/2014/04/28/compiling-elsd-on-osx/#more" class="more-link"><span class="readmore">more...</span></a></p>
+  
+
+
+</div>
+
+<div class="firehose-post article">
+    
+    
+    
+    
+  <a class="title-link" href="/2013/08/13/intrinsic/">
+  <h1 class="title">Dissecting the Camera Matrix, Part 3: The Intrinsic Matrix</h1>
+  </a>
+
+  <div class="date emphnext">August 13, 2013</div>
+    
+
+
+  
+    
+
+<div class="clearer"></div>
+
+
+<div class='context-img' style='width:320px'>
+<img src='/img/kodak-camera.jpg' />
+<div class='caption'>
+<div class='credit'><a href="http://www.flickr.com/photos/alhazen/8587124359/">Credit: Dave6163 (via Flickr)</a></div>
+</div>
+</div>
+
+
+<p>Today we'll study the intrinsic camera matrix in our third and final chapter in the trilogy "Dissecting the Camera Matrix."  In <a href="/2012/08/14/decompose/">the first article</a>, we learned how to split the full camera matrix into the intrinsic and extrinsic matrices and how to properly handle ambiguities that arise in that process.  The <a href="/2012/08/22/extrinsic/">second article</a> examined the extrinsic matrix in greater detail, looking into several different interpretations of its 3D rotations and translations.   Today we'll give the same treatment to the intrinsic matrix, examining two equivalent interpretations: as a description of the virtual camera's geometry and as a sequence of simple 2D transformations.   Afterward, you'll see an interactive demo illustrating both interpretations.</p>
+
+<p>If you're not interested in delving into the theory and just want to use your intrinsic matrix with OpenGL, check out the articles <a href="/2013/06/03/calibrated_cameras_in_opengl/">Calibrated Cameras in OpenGL without glFrustum</a> and <a href="/2013/06/18/calibrated-cameras-and-gluperspective/">Calibrated Cameras and gluPerspective</a>.</p>
+
+<p>All of these articles are part of the series "<a href="/2012/08/13/introduction/">The Perspective Camera, an Interactive Tour</a>."  To read the other entries in the series, <a href="/2012/08/13/introduction/#toc">head over to the table of contents</a>.</p>
+
+
+    <p> <a href="/2013/08/13/intrinsic/#more" class="more-link"><span class="readmore">more...</span></a></p>
+  
+
+
+</div>
+
+<div class="firehose-post article">
+    
+    
+    
+    
+  <a class="title-link" href="/2013/06/18/calibrated-cameras-and-gluperspective/">
+  <h1 class="title">Calibrated Cameras and gluPerspective</h1>
+  </a>
+
+  <div class="date emphnext">June 18, 2013</div>
+    
+
+
+  
+    <p>After posting my last article <a href="/2013/06/03/calibrated_cameras_in_opengl/">relating glFrustum to the intrinsic camera matrix</a>, I receieved some emails asking how the (now deprecated) <a href="http://pic.dhe.ibm.com/infocenter/aix/v6r1/index.jsp?topic=%2Fcom.ibm.aix.opengl%2Fdoc%2Fopenglrf%2FgluPerspective.htm">gluPerspective</a> function relates to the intrinsic matrix.  We can show a similar result with <code>gluPerspective</code> as we did with <code>glFrustum</code>, namely that it is the product of a <code>glOrtho</code> matrix and a (modified) intrinsic camera matrix, but in this case the intrinsic matrix has different constraints.  I'll be re-using notation and concepts from the previous article, so if you aren't familiar with them, I recommend reading it first.</p>
+
+
+    <p> <a href="/2013/06/18/calibrated-cameras-and-gluperspective/#more" class="more-link"><span class="readmore">more...</span></a></p>
+  
+
+
+</div>
+
+<div class="firehose-post article">
+    
+    
+    
+    
+  <a class="title-link" href="/2013/06/03/calibrated_cameras_in_opengl/">
+  <h1 class="title">Calibrated Cameras in OpenGL without glFrustum</h1>
+  </a>
+
+  <div class="date emphnext">June 03, 2013</div>
+    
+
+
+  
+    <div class="clearer"></div>
+
+
+<div class='context-img' style='width:317px'>
+<img src='/img/augmented_reality.jpg' />
+<div class='caption'>Simulating a calibrated camera for augmented reality.
+<div class='credit'><a href="http://www.flickr.com/photos/thp4/8060086636/">Credit: thp4</a></div>
+</div>
+</div>
+
+
+<p>You've calibrated your camera.  You've decomposed it into intrinsic and extrinsic camera matrices. Now you need to use it to render a synthetic scene in OpenGL.  You know the extrinsic matrix corresponds to the modelview matrix and the intrinsic is the projection matrix, but beyond that you're stumped.  You remember something about <code>gluPerspective</code>, but it only permits two degrees of freedom, and your intrinsic camera matrix has five.  glFrustum looks promising, but the mapping between its parameters and the camera matrix aren't obvious and it looks like you'll have to ignore your camera's axis skew.  You may be asking yourself, "I have a matrix, why can't I just use it?"</p>
+
+<p>You can.  And you don't have to jettison your axis skew, either.  In this article, I'll show how to use your intrinsic camera matrix in OpenGL with minimal modification.  For illustration, I'll use OpenGL 2.1 API calls, but the same matrices can be sent to your shaders in modern OpenGL.</p>
+
+
+    <p> <a href="/2013/06/03/calibrated_cameras_in_opengl/#more" class="more-link"><span class="readmore">more...</span></a></p>
+  
+
+
+</div>
+
+
+<!-- Pagination links -->
+<div class="pagination">
+  
+  
+  
+    <a href="/page2" class="next ">Read Older Posts &gt;&gt;</a>
+  
+</div>
+
+
+</div><!-- End Page -->
+
+
+  
+  <div id="footer">
+  	<address>
+  		<span class="copyright">
+  			Content by <a href="/about.html">Kyle Simek</a>. Original design by 
+  			<a href="http://mark.reid.name/">Mark Reid</a>
+  			<br/>
+  			(<a rel="licence" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Some rights reserved</a>)			
+  		</span>
+  		<span class="engine">
+  			Powered by <a href="https://github.com/mojombo/jekyll/" title="A static, minimalist CMS">Jekyll</a>
+  		</span>
+  	</address>
+  </div>
+  
+</div>
+
+<!--[if IE 6]>
+<script type="text/javascript"> 
+	/*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+	var IE6UPDATE_OPTIONS = {
+		icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+	}
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+
+  
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33692744-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+</body>
+</html>
