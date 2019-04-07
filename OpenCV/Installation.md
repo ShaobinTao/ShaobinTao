@@ -48,7 +48,7 @@ sudo make install
 ```
 
 ## HelloWorld example
-For quick testing, download Makefile, hello.cpp to your ~/opencv directory. Run
+For quick testing, download Makefile, hello.cpp to your ~/opencv directory from https://github.com/ShaobinTao/ShaobinTao.github.io/tree/master/OpenCV. Run
 ```
 opencv$ make
 ```
