@@ -3,9 +3,11 @@ When I was trying to build OpenCV(**4.1.0** as of writing) from source and insta
 
 * OpenCV 4.1.0 does not work well Ubuntu 14.04 LTS. I tried [OpenCV 3.2.0](https://github.com/opencv/opencv/releases/tag/3.2.0) and it worked for me.
 * ld cache needs to be refreshed in order to use locally built OpenCV libs.
+* The HelloWorld sample is for C/C++ users.
 
 ## Detailed Steps
 The main steps I found are from [Open CV docs](https://docs.opencv.org/4.0.1/d7/d9f/tutorial_linux_install.html). For completeness, I copied/pasted some steps here.
+* Install the dependency packages documented at https://docs.opencv.org/4.0.1/d7/d9f/tutorial_linux_install.html.
 * Download [OpenCV 3.2.0 source code](https://github.com/opencv/opencv/archive/3.2.0.zip). Note "git clone" would work also. Assume the source code is unziped to ~/opencv
 * Create a temp folder build
 ```
@@ -13,26 +15,26 @@ cd ~/opencv
 mkdir build
 cd build
 ```
-* run cmake-gui to configure the build settings
+* Run cmake-gui to configure the build settings
 ```
 cmake-gui
 ```
-Configure the build settings as needed. For persons who choose to build from source, likely, we want a debug build which we can debug. 
+Configure the build settings as needed. For persons who choose to build from source, likely, we want a debug build which we can debug. Some main settings of interest are:
 * "Where is the source code": ~/opencv
 * "Where to build the binaries": ~/opencv/build
 * Press "Confgure" button
 * Press "Generate" button
 * In "Search"" editbox, change settings below as needed
   * CMAKE_BUILD_TYPE=Debug
-  * input "debug"
-  * input "opt" (optimization)
-  * input "pkg" (for package configuration pc file generation, available on 4.1.0, not on 3.2.0)
-  * input "opengl" "opencl" "cuda" etc
+  * search "debug" and change those needed
+  * search "opt" (optimization) and change those needed
+  * search "pkg" (for package configuration pc file generation, available on 4.1.0, not on 3.2.0)
+  * search "opengl" "opencl" "cuda" etc
 
-* build the binaries
+* Build the binaries
 ```
 ~/opencv/build/make -j16
-// -j16 means run 16 jobs in parallel. the number depends on how many CPU cores your computer has
+// -j16 means run 16 jobs in parallel. The number depends on how many CPU cores your computer has.
 ```
 
 * Install the binaries to the right locations
@@ -40,13 +42,17 @@ Configure the build settings as needed. For persons who choose to build from sou
 sudo make install
 ```
 
-* Update ld cache so your programs can find the new libs (** this step is not in OpenCV doc**)
+* Update ld cache so your programs can find the new libs (**this step is not in OpenCV doc**)
 ```
 sudo make install
 ```
 
-
 ## HelloWorld example
+For quick testing, download Makefile, hello.cpp to your ~/opencv directory. Run
+```
+opencv$ make
+```
+Hooray, you can test OpenCV functions locally now.
 
 
 ## Appendix
