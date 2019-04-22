@@ -44,7 +44,7 @@ sudo make install
 
 * Update ld cache so your programs can find the new libs (**this step is not in OpenCV doc**)
 ```
-sudo make install
+sudo ldconfig
 ```
 
 ## HelloWorld example
