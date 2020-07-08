@@ -18,6 +18,9 @@ cd build
 * Run cmake-gui to configure the build settings
 ```
 cmake-gui
+
+- cmake-gui is available from "brew cask install cmake". brew install cmake" won't have it. 
+
 ```
 Configure the build settings as needed. For persons who choose to build from source, likely, we want a debug build which we can debug. Some main settings of interest are:
 * "Where is the source code": ~/opencv
